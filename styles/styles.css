@@ -1,0 +1,153 @@
+@font-face {
+    font-family: "vazir";
+    src: url("../fonts/vazir-font/Vazir-Bold.eot") format("eot");
+    src: url("../fonts/vazir-font/Vazir-Bold.ttf"),
+        url("../fonts/vazir-font/Vazir-Bold.ttf"),
+        url("../fonts/vazir-font/Vazir-Bold.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+body{
+    direction: rtl;
+    padding: 0;
+    margin: 0;
+    font-family: vazir;
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url("../images/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+}
+
+/* menu */
+
+.container .menu {
+    position: absolute;
+width: 90%;
+height: 60%;
+background: rgba(0, 0, 0, 0.336);
+top: 10%;
+left: 50%;
+transform: translateX(-50%);
+border-radius: 15px;
+border: 5px solid #43ff0a8c;
+}
+
+.container .menu img {
+    position: absolute;
+    width: 35%;
+    height: 25%;
+left: 50%;
+transform: translateX(-50%);
+top: 5%;
+object-fit: cover;
+}
+
+.container .menu h1 {
+    color: #fff;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+transform: translateX(-50%);
+}
+
+.container .menu .number {
+    padding: 7px;
+    width: 90%;
+    margin: 18px;
+    position: absolute;
+    top: 50%;
+    font-family: vazir;
+    direction: ltr;
+    font-size: 20px;
+    border: 2px solid #43ff0a8c;
+    border-radius: 15px;
+    background: rgba(0, 0, 0, 0.473);
+    transition: all 0.2s linear;
+    color: #fff;
+}
+
+.container .menu .number:focus {
+    box-shadow: 0 0 15px #43ff0a;
+}
+
+.container .menu .down-btn{
+    position: absolute;
+    width: 30%;
+    padding: 5px 15px;
+    bottom: 12%;
+    font-family: vazir;
+    direction: ltr;
+    font-size: 20px;
+    border: 2px solid #43ff0a8c;
+    border-radius: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.473);
+    color: #fff;
+    transition: all 0.2s;
+}
+
+.container .menu .down-btn.editing {
+    visibility: hidden;
+}
+
+.container .menu .down-btn:hover{
+    background: #43ff0a8c;
+    animation: pulse 1s linear infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 #43ff0a;
+        background: #43ff0a;
+    }
+
+    100% {
+        background: #0080007c;
+        box-shadow: 0 0 15px #43ff0a;
+    }
+}
+
+.container p{
+    color: #fff;
+    position: absolute;
+    bottom: 7%;
+    right: 3%;
+}
+
+.container .timeOut {
+    position: absolute;
+    width: 90%;
+    margin: 18px;
+    bottom: 18%;
+    visibility: hidden;
+}
+
+.container .timeOut.showing {
+visibility: visible;
+}
+
+.modal {
+    color: #fff;
+    position: absolute;
+    padding: 10px;
+    text-align: center;
+    bottom: 2%;
+    visibility: hidden;
+}
+
+.modal.show{
+    visibility: visible;
+}
